@@ -132,7 +132,7 @@ Uso de Docker para MongoDB	✅
 👩‍💻 Desarrollado por
 Adriana Pamela González Orellana
 📧 apgonzalez1@espe.edu.ec
-🛠️ Escuela Politécnica del Ejército – ESPE
+
 
 📘 Licencia
 Este proyecto es parte de una evaluación académica. No distribuir sin autorización.
