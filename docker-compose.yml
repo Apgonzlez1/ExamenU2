@@ -3,7 +3,7 @@ services:
     image: mongo:6
     container_name: chat-mongo
     ports:
-      - "27017:27017"
+      - "27017:27018"
     volumes:
       - mongo-data:/data/db
 

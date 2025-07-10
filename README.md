@@ -6,6 +6,14 @@ Este proyecto fue desarrollado como parte del Examen de la Unidad 2 de la materi
 
 ## 📸 Capturas del Proyecto
 
+### 🖥️ Vista del Frontend (Formulario)
+
+Muestra el formulario de registro e inicio de sesión en la interfaz del frontend.
+
+![Formulario Frontend](src/capturas/registro.png)
+
+---
+
 ### 🔐 Registro de Usuario
 
 ![Registro de Usuario](src/capturas/Crear.PNG)
@@ -37,24 +45,23 @@ Este proyecto fue desarrollado como parte del Examen de la Unidad 2 de la materi
 
 ## 📁 Estructura del Proyecto
 
-/src
-├── api
-│ ├── controllers
-│ └── routes
-├── domain
-│ ├── models
-│ └── use-cases
-├── infrastructure
-│ ├── middlewares
-│ ├── repositories
-│ └── websockets
-├── config
-├── capturas
-├── app.js
+/src  
+├── api  
+│ ├── controllers  
+│ └── routes  
+├── domain  
+│ ├── models  
+│ └── use-cases  
+├── infrastructure  
+│ ├── middlewares  
+│ ├── repositories  
+│ └── websockets  
+├── config  
+├── capturas  
+├── app.js  
 └── .env
 
 yaml
-
 
 ---
 
@@ -67,11 +74,10 @@ npm install
 2. Archivo .env
 env
 
-PORT=3000
-MONGO_URI=mongodb://127.0.0.1:27017/chat_db
+PORT=3000  
+MONGO_URI=mongodb://127.0.0.1:27017/chat_db  
 JWT_SECRET=claveSuperSecreta123
 3. Inicia MongoDB con Docker
-
 
 docker compose up -d
 4. Inicia el servidor
@@ -81,7 +87,6 @@ nodemon app.js
 📝 POST /api/auth/register
 Crea un nuevo usuario.
 
-json
 
 {
   "email": "adriana@example.com",
@@ -90,15 +95,12 @@ json
 🔐 POST /api/auth/login
 Devuelve un JWT para autenticación.
 
-json
 
 {
   "email": "adriana@example.com",
   "password": "123456"
 }
 📥 Respuesta esperada:
-
-json
 
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR..."
@@ -107,7 +109,7 @@ json
 Una vez autenticado, el usuario puede conectarse a WebSocket con su token:
 
 Conexión con autenticación
-js
+
 
 const socket = io("http://localhost:3000", {
   auth: {
@@ -115,7 +117,8 @@ const socket = io("http://localhost:3000", {
   }
 });
 Emitir mensaje
-js
+
+
 
 socket.emit("sendMessage", {
   text: "Hola mundo"
@@ -133,8 +136,5 @@ Uso de Docker para MongoDB	✅
 Adriana Pamela González Orellana
 📧 apgonzalez1@espe.edu.ec
 
-
 📘 Licencia
 Este proyecto es parte de una evaluación académica. No distribuir sin autorización.
-
-

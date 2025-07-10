@@ -1,9 +1,10 @@
+require('dotenv').config();  // <-- debe ir al inicio
+
 const express = require('express');
 const http = require('http');
 const connectDB = require('./src/config/db');
 const authRoutes = require('./src/api/routes/auth.routes');
 const { setupWebsocket } = require('./src/infrastructure/websockets/chat.handler');
-require('dotenv').config();
 
 const app = express();
 const server = http.createServer(app);
