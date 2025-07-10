@@ -69,22 +69,22 @@ yaml
 
 ### 1. Instala dependencias
 
-```bash
+
 npm install
 2. Archivo .env
-env
+### env
 
 PORT=3000  
 MONGO_URI=mongodb://127.0.0.1:27017/chat_db  
 JWT_SECRET=claveSuperSecreta123
-3. Inicia MongoDB con Docker
+### 3. Inicia MongoDB con Docker
 
 docker compose up -d
-4. Inicia el servidor
+### 4. Inicia el servidor
 
 nodemon app.js
-📦 Endpoints
-📝 POST /api/auth/register
+### 📦 Endpoints
+### 📝 POST /api/auth/register
 Crea un nuevo usuario.
 
 
@@ -92,7 +92,7 @@ Crea un nuevo usuario.
   "email": "adriana@example.com",
   "password": "123456"
 }
-🔐 POST /api/auth/login
+### 🔐 POST /api/auth/login
 Devuelve un JWT para autenticación.
 
 
@@ -100,15 +100,15 @@ Devuelve un JWT para autenticación.
   "email": "adriana@example.com",
   "password": "123456"
 }
-📥 Respuesta esperada:
+### 📥 Respuesta esperada:
 
 {
   "token": "eyJhbGciOiJIUzI1NiIsInR..."
 }
-🌐 WebSocket (Socket.IO)
+### 🌐 WebSocket (Socket.IO)
 Una vez autenticado, el usuario puede conectarse a WebSocket con su token:
 
-Conexión con autenticación
+### Conexión con autenticación
 
 
 const socket = io("http://localhost:3000", {
@@ -123,7 +123,7 @@ Emitir mensaje
 socket.emit("sendMessage", {
   text: "Hola mundo"
 });
-✅ Funcionalidades Completadas
+### ✅ Funcionalidades Completadas
 Funcionalidad	Estado
 Registro de usuario	✅
 Inicio de sesión (JWT)	✅
@@ -132,9 +132,9 @@ Envío de mensajes en tiempo real	✅
 Guardado de mensajes en MongoDB	✅
 Uso de Docker para MongoDB	✅
 
-👩‍💻 Desarrollado por
+### 👩‍💻 Desarrollado por
 Adriana Pamela González Orellana
-📧 apgonzalez1@espe.edu.ec
+### 📧 apgonzalez1@espe.edu.ec
 
-📘 Licencia
+### d📘 Licencia
 Este proyecto es parte de una evaluación académica. No distribuir sin autorización.
